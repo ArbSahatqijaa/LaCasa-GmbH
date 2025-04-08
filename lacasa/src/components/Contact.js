@@ -1,0 +1,96 @@
+import React, { useState } from 'react';
+import './Contact.css';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
+  };
+
+  return (
+    
+    <div className="contact-container" style={{ backgroundImage: `url("/assets/gallery/bathroom1.jpg")` }}>
+      <div className="contact-content" >
+        {/* Left Section: Text */}
+        <div className="contact-text">
+          <h1>CONTACT US</h1>
+          <p>
+            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+          {/* Location and Phone Section */}
+          <div className="contact-info">
+            <div className="info-item">
+              <span className="icon">📍</span> {/* Location pin icon */}
+              <span>Lorem ipsum is simply</span>
+            </div>
+            <div className="info-item">
+              <span className="icon">📞</span> {/* Phone icon */}
+              <span>+123 456 789</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Section: Form */}
+        <div className="contact-form">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <button type="submit">SEND</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

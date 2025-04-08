@@ -1,0 +1,48 @@
+footer {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+    clear: both;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.social-links a:hover {
+    color: #ff6200;
+}
+
+/* Ensure body and html take full height for footer positioning */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    flex: 1 0 auto; /* Allows sections to grow but not shrink beyond content */
+}

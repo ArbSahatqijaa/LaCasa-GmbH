@@ -1,0 +1,13 @@
+/* src/index.css or src/App.css */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('./assets/background.svg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  }
+  
+  /* Ensure the root element also takes up full height */
+  #root {
+    min-height: 100vh;
+  }
