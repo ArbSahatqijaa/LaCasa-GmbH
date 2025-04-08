@@ -7,7 +7,7 @@ const galleries = [
     id: 1,
     title: 'Modern Bathroom',
     images: [
-      '/assets/gallery/ballkoni.jpg',
+      './assets/gallery/ballkoni.jpg',
       '/assets/gallery/ballkoni2.jpg',
       '/assets/gallery/ballkoni.jpg',
       '/assets/gallery/ballkoni2.jpg',
