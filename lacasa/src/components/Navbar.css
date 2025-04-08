@@ -10,10 +10,15 @@
   z-index: 10;
 }
 
+.logo-img {
+  height: 60px; /* Adjust as needed */
+  margin-right: 10px;
+  vertical-align: middle;
+}
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: orange;
+  color: rgb(0, 0, 0);
 }
 
 .nav-links {
@@ -27,7 +32,10 @@
   color: #333;
   font-weight: 500;
 }
-
+.nav-links :hover a{
+  color: orange;
+  transition: 0.1s ease-in;
+}
 .menu-icon {
   display: none;
   background: none;

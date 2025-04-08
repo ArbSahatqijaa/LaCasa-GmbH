@@ -10,7 +10,10 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">LA CASA GmbH</div>
+      <div className="navbar-logo">
+        <img src="/assets/gallery/logo.png" alt="LaCasa Logo" className="logo-img" />
+        LA CASA GmbH
+      </div>
 
       <ul className={isMobile ? 'nav-links mobile' : 'nav-links'}>
         <li><a href="#">Home</a></li>

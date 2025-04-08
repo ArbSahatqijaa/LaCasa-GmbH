@@ -1,167 +1,171 @@
 .services-container {
-    padding: 50px;
-  }
-  .services-main {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-  }
-  .services-container h2{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #ff8c00;
-    padding: 30px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .services-text {
-    padding: 10px;
-    flex: 1;
-    padding-left: 80px;
-    max-width: 50%;
-  }
-  
-  .services-text h1 {
-    font-size: 3.0rem;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .services-text p {
-    font-size: 0.8rem;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  /* Icons Section */
-  .services-icons {
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .icon-item {
-    text-align: center;
-    margin-top: 20px;
-    padding: 30px;
-  }
-  
-  .icon-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Circular images */
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .icon-item p {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .services-photos {
-    flex: 1;
-    max-width:70%;
-  }
+  padding: 50px;
+}
 
-  .before-after {
+.services-main {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 
-    display: flex;
-    flex-direction: column; /* Stack images vertically */
-    align-items: center; /* Align images to the right */
-    gap: 30px;
-  }
+.services-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ff8c00;
+  padding: 30px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
 
-  .before, .after {
-    text-align: center;
-  }
-  
-  .before img, .after img {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-  
-  .before p, .after p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ff6200; 
-    margin-top: 10px;
-  }
+.services-text {
+  padding: 10px;
+  flex: 1;
+  padding-left: 80px;
+  max-width: 50%;
+}
 
-/* Te ndreqet sepse sesthe mire */
+.services-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.services-text p {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Icons Section */
+.services-icons {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.icon-item {
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.icon-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.icon-item p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.services-photos {
+  flex: 1;
+  max-width: 70%;
+}
+
+.before-after {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.before, .after {
+  text-align: center;
+}
+
+.before img, .after img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.before p, .after p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff6200;
+  margin-top: 10px;
+}
 @media (max-width: 900px) {
   .services-main {
-    flex-direction: column; /* Stack the text and photos vertically */
+    flex-direction: column;
+    align-items: center;
   }
 
   .services-text,
   .services-photos {
-    max-width: 100%; /* Full width for both sections */
+    max-width: 100%;
+    padding-left: 0;
   }
 
   .services-icons {
-    justify-content: center; /* Keep icons centered */
-    gap: 20px; /* Reduce gap slightly for smaller screens */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
   .before-after {
-    justify-content: center; /* Center the before/after photos */
-    gap: 15px; /* Reduce gap between photos */
-  }
-}
-
-/* For screens smaller than 600px */
-@media (max-width: 600px) {
-  .services-text h1 {
-    font-size: 2rem; /* Smaller heading */
-    text-align: center;
-  }
-
-  .services-text p {
-    font-size: 0.9rem; /* Smaller text */
-    text-align: c;
-  }
-
-  .services-icons {
-    flex-direction: column; /* Stack icons vertically */
-    align-items: center;
-    gap: 15px; /* Reduce gap further */
-  }
-
-  .icon-image {
-    width: 100px; /* Smaller icons */
-    height: 100px;
-  }
-
-  .icon-item p {
-    font-size: 0.9rem; /* Smaller text for icon labels */
-  }
-
-  .before-after {
-    flex-direction: column; /* Stack before/after photos vertically */
-    align-items: center;
-    gap: 10px; /* Smaller gap */
+    justify-content: center;
+    gap: 20px;
   }
 
   .before img, .after img {
-    width: 100%; /* Full width for images */
-    max-width: 200px; /* Limit max width */
-    height: 150px; /* Adjust height */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-text h1 {
+    font-size: 2rem;
+  }
+
+  .services-text p {
+    font-size: 0.9rem;
+  }
+
+  .services-icons {
+    flex-direction:column
+  }
+
+  .icon-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-item p {
+    font-size: 0.9rem;
+  }
+
+  .before-after {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .before img, .after img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
   }
 
   .before p, .after p {
-    font-size: 1rem; /* Smaller text for labels */
+    font-size: 1rem;
   }
 }

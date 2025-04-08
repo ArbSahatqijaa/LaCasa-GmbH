@@ -15,15 +15,15 @@ const Services = () => {
           {/* Icons Section */}
           <div className="services-icons">
             <div className="icon-item">
-              <img src="path-to-ceramic-image.jpg" alt="Ceramic" className="icon-image" />
+              <img src="/assets/gallery/ceramic.png" alt="Ceramic" className="icon-image" />
               <p>CERAMIC</p>
             </div>
             <div className="icon-item">
-              <img src="path-to-wood-image.jpg" alt="Wood" className="icon-image" />
+              <img src="/assets/gallery/floor2.png" alt="Wood" className="icon-image" />
               <p>WOOD</p>
             </div>
             <div className="icon-item">
-              <img src="path-to-flooring-image.jpg" alt="Flooring" className="icon-image" />
+              <img src="/assets/gallery/floor.png" alt="Flooring" className="icon-image" />
               <p>FLOORING</p>
             </div>
           </div>

@@ -6,43 +6,69 @@ footer {
     width: 100%;
     position: relative;
     bottom: 0;
-    margin-top: auto; /* Pushes footer to bottom if content is short */
+    margin-top: auto;
     clear: both;
-}
-
-.footer p {
+  }
+  
+  .footer p {
     font-size: 14px;
     margin: 0;
     font-weight: 400;
-}
-
-.social-links {
+  }
+  
+  .social-links {
     margin-top: 10px;
-}
-
-.social-links a {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .social-links a {
     color: #333;
     text-decoration: none;
     margin: 0 10px;
     font-weight: 400;
-}
-
-.social-links a:hover {
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
     color: #ff6200;
-}
-
-/* Ensure body and html take full height for footer positioning */
-html, body {
+  }
+  
+  /* Full height layout structure */
+  html, body {
     height: 100%;
     margin: 0;
-}
-
-body {
+  }
+  
+  body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-section {
-    flex: 1 0 auto; /* Allows sections to grow but not shrink beyond content */
-}
+  }
+  
+  section {
+    flex: 1 0 auto;
+  }
+  
+  /* ✅ Responsive Footer for Mobile */
+  @media (max-width: 600px) {
+    .footer p {
+      font-size: 13px;
+      padding: 0 10px;
+    }
+  
+    .social-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+  
+    .social-links a {
+      margin: 0;
+      font-size: 14px;
+    }
+  }
+  
