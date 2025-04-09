@@ -74,11 +74,12 @@
   justify-content: center;
   border-radius: 50%;
   opacity: 0.9;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 .gallery-item:hover .gallery-image-wrapper::after {
   opacity: 1;
+  transform: rotate(90deg); /* Rotate 90 degrees on hover */
 }
 
 /* Gallery Item Title */

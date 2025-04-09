@@ -40,9 +40,16 @@ const Contact = () => {
           </p>
           {/* Location and Phone Section */}
           <div className="contact-info">
-            <div className="info-item">
+          <div className="info-item">
               <span className="icon">📍</span>
-              <span>Lorem ipsum is simply</span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=123+Main+Street,+City,+Country"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="location-link"
+              >
+                123 Main Street, City, Country
+              </a>
             </div>
             <div className="info-item">
             <span className="icon">📞</span>

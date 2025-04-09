@@ -29,8 +29,8 @@
   border-radius: 12px;
   max-width: 90%;
   max-height: 90vh;
-  width: 800px;
-  padding: 1.5rem;
+  width: 700px; /* Reduced width for better proportionality */
+  padding: 2rem; /* Increased padding to ensure space for close button */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -69,6 +69,7 @@
   justify-content: center;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 10; /* Ensure the close button is above other elements */
 }
 
 .modal-close:hover {
@@ -80,7 +81,14 @@
 .modal-main-image {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 50%; /* Reduced from 56.25% (16:9) to 50% for a smaller height */
+}
+
+/* Ensure the image container has a minimum height to prevent overlap */
+.modal-main-image::before {
+  content: '';
+  display: block;
+  padding-top: 50px; /* Reserve space at the top for the close button */
 }
 
 .modal-main-image img {
@@ -139,8 +147,8 @@
 }
 
 .thumbnail-wrapper {
-  width: 80px;
-  height: 60px;
+  width: 70px; /* Reduced from 80px */
+  height: 52.5px; /* Reduced from 60px (maintaining 4:3 ratio) */
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
@@ -186,11 +194,11 @@
 @media (max-width: 768px) {
   .modal-content {
     width: 95%;
-    padding: 1rem;
+    padding: 1.5rem; /* Slightly reduced padding but still enough for close button */
   }
 
   .modal-main-image {
-    padding-top: 75%; /* 4:3 aspect ratio for smaller screens */
+    padding-top: 60%; /* Adjusted for smaller screens */
   }
 
   .modal-arrow {
@@ -200,16 +208,26 @@
   }
 
   .thumbnail-wrapper {
-    width: 60px;
-    height: 45px;
+    width: 55px; /* Reduced from 60px */
+    height: 41.25px; /* Reduced from 45px */
   }
 }
 
 @media (max-width: 480px) {
+  .modal-content {
+    padding: 1rem;
+  }
+
   .modal-close {
     width: 35px;
     height: 35px;
     font-size: 1.2rem;
+    top: 5px;
+    right: 5px;
+  }
+
+  .modal-main-image {
+    padding-top: 70%; /* Further adjusted for very small screens */
   }
 
   .modal-arrow {
@@ -219,7 +237,7 @@
   }
 
   .thumbnail-wrapper {
-    width: 50px;
-    height: 37.5px;
+    width: 45px; /* Reduced from 50px */
+    height: 33.75px; /* Reduced from 37.5px */
   }
 }
