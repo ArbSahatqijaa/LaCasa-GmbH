@@ -32,7 +32,7 @@ const Slider = () => {
   };
 
   return (
-    <section className="slider-section">
+    <section id = "slider" className="slider-section">
       <div className="slider-wrapper">
         {/* Left Section: Orange Bar with Text */}
         <div className="slider-text">

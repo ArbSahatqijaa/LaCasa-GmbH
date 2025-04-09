@@ -36,6 +36,7 @@
 }
 
 .hero-button {
+  cursor: pointer;  
   background-color: orange;
   color: white;
   padding: 0.8rem 1.6rem;
@@ -46,7 +47,8 @@
 }
 
 .hero-button:hover {
-  background-color: darkorange;
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 /* Responsive */

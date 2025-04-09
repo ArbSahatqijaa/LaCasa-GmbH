@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import { Link } from 'react-scroll';
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
           <li><strong>·</strong> FLOORING</li>
           <li><strong>·</strong> KERAMIK</li>
         </ul>
-        <button className="book-btn">BOOK A SERVICE</button>
+        <Link to="services" smooth={true} duration={1000} offset={-80} className='book-btn'>Services</Link>
       </div>
     </section>
   );
