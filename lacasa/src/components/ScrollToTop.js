@@ -24,8 +24,9 @@ const ScrollToTop = () => {
   return (
     <button
       className={`scroll-to-top ${visible ? 'show' : ''}`}
-      onClick={scrollToTop}
-    >  <FontAwesomeIcon icon={faChevronUp} />
+      onClick={scrollToTop}>  
+      
+    <FontAwesomeIcon icon={faChevronUp} />
 
       
     </button>
