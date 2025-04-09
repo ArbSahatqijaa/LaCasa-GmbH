@@ -9,47 +9,84 @@ const GalleryModal = ({ gallery, onClose }) => {
 
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
+    setZoom(false); // Reset zoom when changing images
   };
 
   const prevImage = () => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+    setZoom(false); // Reset zoom when changing images
   };
 
-  const toggleZoom = () => {
+  const toggleZoom = (e) => {
+    e.stopPropagation(); // Prevent the click from bubbling up to the overlay
     setZoom(!zoom);
   };
 
+  const handleOverlayClick = (e) => {
+    // Only close if the click is directly on the overlay, not on its children
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>×</button>
+        <button
+          className="modal-close"
+          onClick={onClose}
+          aria-label="Close modal"
+        >
+          ×
+        </button>
 
         <div className="modal-main-image">
           <img
             src={images[currentImage]}
-            alt={`Image ${currentImage + 1}`}
+            alt={`${gallery.title} - Image ${currentImage + 1}`}
             className={zoom ? 'zoom' : ''}
             onClick={toggleZoom}
           />
-          <button className="modal-arrow left" onClick={prevImage}>❮</button>
-          <button className="modal-arrow right" onClick={nextImage}>❯</button>
+          <button
+            className="modal-arrow left"
+            onClick={prevImage}
+            aria-label="Previous image"
+          >
+            ❮
+          </button>
+          <button
+            className="modal-arrow right"
+            onClick={nextImage}
+            aria-label="Next image"
+          >
+            ❯
+          </button>
         </div>
 
         <div className="modal-thumbnails">
           {images.map((img, idx) => (
-            <img
+            <div
               key={idx}
-              src={img}
-              alt={`Thumbnail ${idx + 1}`}
-              className={currentImage === idx ? 'active' : ''}
+              className={`thumbnail-wrapper ${currentImage === idx ? 'active' : ''}`}
               onClick={() => setCurrentImage(idx)}
-            />
+            >
+              <img
+                src={img}
+                alt={`${gallery.title} - Thumbnail ${idx + 1}`}
+                className="thumbnail"
+              />
+            </div>
           ))}
         </div>
 
-        <p className="modal-description">
-          Click the image to {zoom ? 'zoom out' : 'zoom in'}
-        </p>
+        <div className="modal-footer">
+          <p className="modal-description">
+            {gallery.title} - Image {currentImage + 1} of {images.length}
+          </p>
+          <p className="modal-zoom-info">
+            Click the image to {zoom ? 'zoom out' : 'zoom in'}
+          </p>
+        </div>
       </div>
     </div>
   );

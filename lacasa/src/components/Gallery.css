@@ -1,99 +1,159 @@
+/* Gallery Section */
 .gallery-section {
-  padding: 100px;
-  background-color: #f9f9f9;
-  text-align: center;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gallery-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #ff8c00;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
+/* Gallery Grid */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6rem;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
 }
 
+/* Gallery Item */
 .gallery-item {
-  background-color: white;
-  padding: 20px; /* Reduced from 2rem */
-  border-radius: 20px;
+  position: relative;
   cursor: pointer;
-  transition: transform 0.2s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers text and image */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Image Wrapper */
 .gallery-image-wrapper {
-  width: 80%;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio */
 }
 
 .gallery-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  border-radius: 8px 8px 0 0;
 }
 
-.gallery-image-wrapper img:hover {
-  transform: scale(1.05);
-}
-
-.gallery-item p {
-  margin-top: 1.5rem;
-  font-weight: 500;
-  color: #000000;
-}
-
-.gallery-footer {
-  margin-top: 2rem;
+/* Plus Icon Overlay */
+.gallery-image-wrapper::after {
+  content: '+';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: #f5a623;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image-wrapper::after {
+  opacity: 1;
+}
+
+/* Gallery Item Title */
+.gallery-item p {
+  background: #fff;
+  padding: 1rem;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Gallery Footer */
+.gallery-footer {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gallery-footer span {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .pagination button {
-  margin: 0 5px;
-  padding: 0.4rem 0.8rem;
-  border: none;
-  background-color: orange;
-  color: white;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.pagination button:hover {
+  background: #f5a623;
+  color: #fff;
 }
 
 .pagination button.active {
-  background-color: darkorange;
+  background: #f5a623;
+  color: #fff;
+  border-color: #f5a623;
 }
 
-@media (max-width: 900px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   .gallery-grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;  }
+    gap: 1.5rem;
+  }
 }
 
-@media (max-width: 600px) {
-  .gallery-grid {display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .gallery-footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  .gallery-section h2 {
+    font-size: 2rem;
   }
 }
