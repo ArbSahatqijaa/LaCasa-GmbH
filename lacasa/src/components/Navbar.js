@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
     <div className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
     <img src="/assets/gallery/logo.png" alt="LaCasa Logo" className="logo-img" />
-    LA CASA GmbH
+    
    </div>
 
 
