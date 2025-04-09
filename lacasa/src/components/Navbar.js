@@ -23,10 +23,9 @@ const Navbar = () => {
         <li><Link to="services" smooth={true} duration={1000} offset={-80}>Services</Link></li>
         <li><Link to="contact" smooth={true} duration={1000} offset={-80}>Contact</Link></li>
       </ul>
-
       <button className="menu-icon" onClick={toggleMenu}>
-        {isMobile ? '✖' : '☰'}
-      </button>
+  {isMobile ? '✖' : '☰'}
+</button>
     </nav>
   );
 };

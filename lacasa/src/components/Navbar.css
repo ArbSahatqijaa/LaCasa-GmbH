@@ -37,6 +37,7 @@
   transition: 0.1s ease-in;
 }
 .menu-icon {
+  transition: 3s ease-in;
   display: none;
   background: none;
   border: none;
@@ -65,6 +66,7 @@
   }
 
   .menu-icon {
+    transition: 1s ease;
     display: block;
     color: #333;
   }
