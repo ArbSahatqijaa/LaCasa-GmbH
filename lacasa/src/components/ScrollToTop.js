@@ -9,7 +9,7 @@ const ScrollToTop = () => {
 
   const toggleVisible = () => {
     const scrolled = window.scrollY;
-    setVisible(scrolled > 300);
+    setVisible(scrolled > 100);
   };
 
   const scrollToTop = () => {

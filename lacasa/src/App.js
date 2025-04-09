@@ -9,7 +9,8 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import './styles/main.css';
-import './components/fadein.css'; // Correct path to your new fade-in style
+// import './components/fadein.css'; 
+import Testimonial from './components/Testimonial'; 
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,14 +22,18 @@ function App() {
 
   return (
     <div className={`fade-in-wrapper ${isVisible ? 'visible' : ''}`}>
+       <ScrollToTop />
       <Navbar />
       <HeroSection />
       <About />
       <Slider />
       <Gallery />
       <Services />
+      <Testimonial/>
       <Contact />
-      <ScrollToTop />
+
+
+
       <Footer />
     </div>
   );
