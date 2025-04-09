@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     
-    <div id="contact"className="contact-container" style={{ backgroundImage: `url("/assets/gallery/bathroom1.jpg")` }}>
+    <div id="contact"className="contact-container" style={{ backgroundImage: `url("/assets/gallery/Contact.jpg")` }}>
       <div className="contact-content" >
         {/* Left Section: Text */}
         <div className="contact-text">

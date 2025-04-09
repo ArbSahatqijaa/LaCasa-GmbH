@@ -92,7 +92,7 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="gallery-section" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
-      <h2>OUR PROJECT GALLERY</h2>
+      <h2>OUR WORK</h2>
       <div className="gallery-grid">
         {currentItems.map((gallery) => (
           <div

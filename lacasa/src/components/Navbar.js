@@ -11,10 +11,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <img src="/assets/gallery/logo.png" alt="LaCasa Logo" className="logo-img" />
-        LA CASA GmbH
-      </div>
+    <div className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+    <img src="/assets/gallery/logo.png" alt="LaCasa Logo" className="logo-img" />
+    LA CASA GmbH
+    </div>
+
 
       <ul className={isMobile ? 'nav-links mobile' : 'nav-links'}>
       <li><Link to="hero" smooth={true} duration={1000} offset={-80}>Home</Link></li>
