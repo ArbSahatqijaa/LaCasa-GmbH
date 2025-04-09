@@ -3,7 +3,7 @@ import './Services.css';
 
 const Services = () => {
   return (
-    <div className="services-container" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
+    <div id="services" className="services-container" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
       <h2>SERVICES</h2>
       <div className="services-main">
         <div className="services-text">

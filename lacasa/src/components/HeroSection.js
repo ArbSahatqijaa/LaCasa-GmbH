@@ -1,9 +1,10 @@
 import React from 'react';
 import './HeroSection.css';
+import { Link } from 'react-scroll';
 
 const HeroSection = () => {
   return (
-    <section
+    <section id="hero"
       className="hero-section"
       style={{ backgroundImage: `url("/assets/gallery/ballkoni2.jpg")` }}
     >
@@ -11,7 +12,7 @@ const HeroSection = () => {
         <div className="hero-content">
           <h1>Welcome to La Casa</h1>
           <p>Professional Renovation & Design Services</p>
-          <a href="#gallery" className="hero-button">View Our Work</a>
+        <Link to="gallery" smooth={true} duration={1000} offset={-80} className='hero-button'>Our Work</Link>
         </div>
       </div>
     </section>

@@ -11,3 +11,6 @@ body {
   #root {
     min-height: 100vh;
   }
+  html {
+    scroll-behavior: smooth;
+  }

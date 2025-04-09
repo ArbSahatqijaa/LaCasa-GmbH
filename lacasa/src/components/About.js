@@ -3,7 +3,7 @@ import './About.css';
 
 const About = () => {
   return (
-    <section className="about-section" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
+    <section id="about" className="about-section" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
       <div className="about-left">
         <h2><span>WE ARE</span> LA CASA GmbH</h2>
         <p>

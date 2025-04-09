@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,11 +17,11 @@ const Navbar = () => {
       </div>
 
       <ul className={isMobile ? 'nav-links mobile' : 'nav-links'}>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+      <li><Link to="hero" smooth={true} duration={1000} offset={-80}>Home</Link></li>
+      <li><Link to="about" smooth={true} duration={1000} offset={-80}>About</Link></li>
+        <li><Link to="gallery" smooth={true} duration={1000} offset={-80}>Gallery</Link></li>
+        <li><Link to="services" smooth={true} duration={1000} offset={-80}>Services</Link></li>
+        <li><Link to="contact" smooth={true} duration={1000} offset={-80}>Contact</Link></li>
       </ul>
 
       <button className="menu-icon" onClick={toggleMenu}>

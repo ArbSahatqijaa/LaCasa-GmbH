@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     
-    <div className="contact-container" style={{ backgroundImage: `url("/assets/gallery/bathroom1.jpg")` }}>
+    <div id="contact"className="contact-container" style={{ backgroundImage: `url("/assets/gallery/bathroom1.jpg")` }}>
       <div className="contact-content" >
         {/* Left Section: Text */}
         <div className="contact-text">
@@ -41,13 +41,14 @@ const Contact = () => {
           {/* Location and Phone Section */}
           <div className="contact-info">
             <div className="info-item">
-              <span className="icon">📍</span> {/* Location pin icon */}
+              <span className="icon">📍</span>
               <span>Lorem ipsum is simply</span>
             </div>
             <div className="info-item">
-              <span className="icon">📞</span> {/* Phone icon */}
-              <span>+123 456 789</span>
+            <span className="icon">📞</span>
+            <a href="tel:+123456789" className="phone-link">+123 456 789</a>
             </div>
+
           </div>
         </div>
 

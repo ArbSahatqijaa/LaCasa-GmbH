@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import './styles/main.css';
+import ScrollToTop from './components/ScrollToTop';
+
 
 function App() {
   return (
@@ -19,8 +21,7 @@ function App() {
       <Gallery />
       <Services/>
       <Contact/>
-
-
+      <ScrollToTop /> 
 
       {/* Footer Stays in the end of the page */}
       
