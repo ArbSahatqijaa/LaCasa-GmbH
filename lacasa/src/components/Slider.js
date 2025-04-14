@@ -4,17 +4,17 @@ import './Slider.css';
 const slides = [
   {
     image: '/assets/gallery/Banjo.jpg',
-    title: 'HOUSE KERAMIK',
-    text: 'Lorem ipsum is simply dummy text of the printing and typesetting industry. The industry’s standard dummy text ever since.'
+    title: 'Banjo',
+    text: 'Banjo e Realizuar per klientin me plaka speciale anti gervishtje dhe rreshqitje'
   },
   {
-    image: '/assets/gallery/Banjo2.jpg',
-    title: 'HOUSE KERAMIK',
-    text: 'Lorem ipsum is simply dummy text of the printing and typesetting industry. The industry’s standard dummy text ever since.'
+    image: '/assets/gallery/Tavani.jpg',
+    title: 'Tavani',
+    text: 'Tavan i Realizuar per klientin me LED kualitetit me te larte'
   },
   {
-    image: '/assets/gallery/Banjo3.jpg',
-    title: 'HOUSE KERAMIK',
+    image: '/assets/gallery/Llaminati.jpg',
+    title: 'Llaminati',
     text: 'Lorem ipsum is simply dummy text of the printing and typesetting industry. The industry’s standard dummy text ever since.'
   },
 ];

@@ -6,17 +6,17 @@ const testimonials = [
     name: "Ardian B.",
     location: "Prishtina",
     review: "The team did a fantastic job on our ceramic flooring. Fast, clean, and professional. Highly recommended!",
-    image: "/assets/gallery/logo.png"  },
+    image: "/assets/gallery/Profile1.jpg"  },
   {
     name: "Luljeta S.",
     location: "Gjakova",
     review: "I loved how the kitchen tiles turned out. They helped me pick the perfect color and design!",
-    image: "/assets/gallery/logo.png"  },
+    image: "/assets/gallery/Profile3.jpg"  },
   {
     name: "Erion K.",
     location: "Ferizaj",
     review: "Great service from start to finish. They kept the house tidy and finished earlier than expected.",
-    image: "/assets/gallery/logo.png"
+    image: "/assets/gallery/Profile2.jpg"
   }
 ];
 

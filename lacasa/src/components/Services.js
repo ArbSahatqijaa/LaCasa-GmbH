@@ -3,16 +3,16 @@ import './Services.css';
 
 const beforeAfterImages = [
   {
-    before: '/assets/gallery/ballkoni2.jpg',
-    after: '/assets/gallery/ballkoni.jpg',
+    before: '/assets/gallery/WC.jpg',
+    after: '/assets/gallery/WC2.jpg',
   },
   {
-    before: '/assets/gallery/bathroom1.jpg',
-    after: '/assets/gallery/llaminati.jpg',
+    before: '/assets/gallery/Llaminati.jpg',
+    after: '/assets/gallery/Llaminati2.jpg',
   },
   {
-    before: '/assets/gallery/ballkoni2.jpg',
-    after: '/assets/gallery/ballkoni.jpg',
+    before: '/assets/gallery/Tarasa.jpg',
+    after: '/assets/gallery/Tarasa2.jpg',
   },
 ];
 

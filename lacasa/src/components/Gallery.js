@@ -14,49 +14,50 @@ const galleries = [
   },
   {
     id: 2,
-    title: 'Kitchen Renovation',
+    title: 'Tarasa',
     images: [
-      '/assets/gallery/bathroom1.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
+      '/assets/gallery/Tarasa.jpg',
+      '/assets/gallery/Tarasa2.jpg',
+      '/assets/gallery/Tarasa3.jpg',
+
     ]
   },
   {
     id: 3,
-    title: 'Living Room Upgrade',
+    title: 'Llaminati',
     images: [
-      '/assets/gallery/llaminati.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
+      '/assets/gallery/Llaminati.jpg',
+      '/assets/gallery/Llaminati2.jpg',
+      '/assets/gallery/Llaminati3.jpg',
+      '/assets/gallery/Llaminati4.jpg',
     ]
   },
   {
     id: 4,
-    title: 'Wall Tiling',
+    title: 'Banjo',
     images: [
-      '/assets/gallery/llaminati.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
+      '/assets/gallery/WC.jpg',
+      '/assets/gallery/WC2.jpg',
+      '/assets/gallery/WC3.jpg',
+      '/assets/gallery/WC4.jpg',
+
     ]
   },
   {
     id: 5,
-    title: 'Outdoor Patio',
+    title: 'Tavani',
     images: [
-      '/assets/gallery/bathroom1.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
+      '/assets/gallery/Tavani.jpg',
+      '/assets/gallery/Tavani2.jpg',
+      '/assets/gallery/Tavani3.jpg',
     ]
   },
   {
     id: 6,
-    title: 'Entryway Design',
+    title: 'Parketi',
     images: [
-      '/assets/gallery/ballkoni.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
+      '/assets/gallery/Parketi.jpg',
+      '/assets/gallery/Parketi2.jpg',
     ]
   },
   {
