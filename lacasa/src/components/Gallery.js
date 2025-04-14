@@ -5,12 +5,11 @@ import GalleryModal from './GalleryModal';
 const galleries = [
   {
     id: 1,
-    title: 'Modern Bathroom',
+    title: 'Bathroom',
     images: [
-      './assets/gallery/ballkoni.jpg',
-      '/assets/gallery/ballkoni2.jpg',
-      '/assets/gallery/ballkoni.jpg',
-      '/assets/gallery/ballkoni2.jpg',
+      './assets/gallery/Banjo.jpg',
+      '/assets/gallery/Banjo2.jpg',
+      '/assets/gallery/Banjo3.jpg',
     ]
   },
   {

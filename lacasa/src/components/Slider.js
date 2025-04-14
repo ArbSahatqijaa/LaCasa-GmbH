@@ -3,17 +3,17 @@ import './Slider.css';
 
 const slides = [
   {
-    image: '/assets/gallery/ballkoni2.jpg',
+    image: '/assets/gallery/Banjo.jpg',
     title: 'HOUSE KERAMIK',
     text: 'Lorem ipsum is simply dummy text of the printing and typesetting industry. The industry’s standard dummy text ever since.'
   },
   {
-    image: '/assets/gallery/Bathroom1.jpg',
+    image: '/assets/gallery/Banjo2.jpg',
     title: 'HOUSE KERAMIK',
     text: 'Lorem ipsum is simply dummy text of the printing and typesetting industry. The industry’s standard dummy text ever since.'
   },
   {
-    image: '/assets/gallery/llaminati.jpg',
+    image: '/assets/gallery/Banjo3.jpg',
     title: 'HOUSE KERAMIK',
     text: 'Lorem ipsum is simply dummy text of the printing and typesetting industry. The industry’s standard dummy text ever since.'
   },
