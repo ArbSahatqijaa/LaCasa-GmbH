@@ -26,7 +26,8 @@
   
   .about-left p {
     color: #555;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 2.0;
   }
   
   .about-right {
@@ -49,13 +50,14 @@
   }
   
   .about-right li {
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 0.5rem;
+    font-weight: lighter;
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
   
   .book-btn {
-    margin-top: 1.5rem;
+    margin-top: 15px;
     padding: 0.75rem 1.5rem;
     background-color: orange;
     border: none;
