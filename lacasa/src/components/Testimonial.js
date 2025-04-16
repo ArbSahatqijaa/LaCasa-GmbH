@@ -3,19 +3,19 @@ import './Testimonial.css';
 
 const testimonials = [
   {
-    name: "Ardian B.",
-    location: "Prishtina",
-    review: "The team did a fantastic job on our ceramic flooring. Fast, clean, and professional. Highly recommended!",
+    name: "Familie Schneider",
+    location: "Düsseldorf",
+    review: "Die Renovierung unseres Badezimmers war ein voller Erfolg! Das Team von Lacasa GmbH war pünktlich, professionell und hat sauber gearbeitet. Wir sind begeistert vom Ergebnis.",
     image: "/assets/gallery/Profile1.jpg"  },
   {
-    name: "Luljeta S.",
-    location: "Gjakova",
-    review: "I loved how the kitchen tiles turned out. They helped me pick the perfect color and design!",
+    name: "Markus T.",
+    location: "Köln",
+    review: "Von der Planung bis zur Umsetzung lief alles reibungslos. Besonders die neuen Laminatböden und das Deckenlichtdesign sind echte Highlights geworden. Absolute Empfehlung!",
     image: "/assets/gallery/Profile3.jpg"  },
   {
-    name: "Erion K.",
-    location: "Ferizaj",
-    review: "Great service from start to finish. They kept the house tidy and finished earlier than expected.",
+    name: "Sabine & Thomas L.",
+    location: "Bonn",
+    review: "Sehr gute Beratung und eine tolle handwerkliche Ausführung. Unser Haus wirkt jetzt viel moderner und heller. Vielen Dank an das ganze Team!",
     image: "/assets/gallery/Profile2.jpg"
   }
 ];
@@ -23,7 +23,7 @@ const testimonials = [
 const Testimonial = () => {
   return (
     <section className="testimonial-section" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
-      <h2 className="testimonial-title">What Our Clients Say</h2>
+      <h2 className="testimonial-title">WAS UNSERE KUNDEN SAGEN</h2>
       <div className="testimonial-container">
         {testimonials.map((t, index) => (
           <div className="testimonial-card" key={index}>

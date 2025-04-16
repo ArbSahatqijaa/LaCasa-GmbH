@@ -29,13 +29,15 @@ const Services = () => {
 
   return (
     <div id="services" className="services-container" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
-      <h2>SERVICES</h2>
+      <h2>UNSERE LEISTUNGEN</h2>
       <div className="services-main">
         <div className="services-text">
-          <h1>MAIN SERVICES</h1>
+          <h1>Qualität trifft auf Handwerk <br /> Alles aus einer Hand.</h1>
           <p>
-            Lorem ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem ipsum has been the industry's dummy text ever since.
+          Lacasa GmbH bietet Ihnen ein umfassendes Leistungsspektrum rund um Bau, Renovierung und Innenausbau alles aus einer Hand. Wir sind spezialisiert auf die Verlegung hochwertiger Bodenbeläge wie Laminat, Parkett, Vinyl und Teppich sowie auf professionelle Fliesenarbeiten in Bad, Küche und Außenbereichen. Auch die fachgerechte Sanierung und Reparatur bestehender Böden gehört zu unserem Alltag.
+
+Darüber hinaus gestalten wir Ihre Räume durch modernen Trockenbau und kreative Deckendesigns inklusive Beleuchtungskonzepten ganz nach Ihren Wünschen. Unsere Maler- und Spachtelarbeiten sorgen für ein frisches, stilvolles Raumgefühl.
+
           </p>
           <div className="services-icons">
             <div className="icon-item">

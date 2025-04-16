@@ -4,18 +4,18 @@ import './Slider.css';
 const slides = [
   {
     image: '/assets/gallery/Banjo.jpg',
-    title: 'Banjo',
-    text: 'Banjo e Realizuar per klientin me plaka speciale anti gervishtje dhe rreshqitje'
+    title: 'Badezimmer Renovierung',
+    text: ' Wir verwandeln Ihr Badezimmer in eine echte Wohlfühloase. Mit hochwertigen Fliesen, durchdachter Raumaufteilung und moderner Ausstattung schaffen wir Räume, die nicht nur schön aussehen, sondern auch praktisch im Alltag sind.'
   },
   {
     image: '/assets/gallery/Tavani.jpg',
-    title: 'Tavani',
-    text: 'Tavan i Realizuar per klientin me LED kualitetit me te larte'
+    title: 'Deckenverzierung & Lichtkonzepte',
+    text: 'Mit kreativen Deckengestaltungen und integrierten Lichtsystemen bringen wir Charakter und Atmosphäre in Ihr Zuhause. Ob indirekte Beleuchtung, Stuckelemente oder moderne Designs – wir setzen stilvolle Akzente ganz nach Ihrem Geschmack.'
   },
   {
     image: '/assets/gallery/Llaminati.jpg',
-    title: 'Llaminati',
-    text: 'Lorem ipsum is simply dummy text of the printing and typesetting industry. The industry’s standard dummy text ever since.'
+    title: 'Laminatverlegung',
+    text: 'Unsere Laminatböden bieten eine perfekte Kombination aus Ästhetik und Funktionalität. Professionell verlegt, sorgen sie für ein harmonisches Gesamtbild und ein angenehmes Wohngefühl – ideal für alle Wohnbereiche.'
   },
 ];
 

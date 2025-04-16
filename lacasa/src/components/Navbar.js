@@ -18,11 +18,11 @@ const Navbar = () => {
 
 
       <ul className={isMobile ? 'nav-links mobile' : 'nav-links'}>
-      <li><Link to="hero" smooth={true} duration={1000} offset={-80}>Home</Link></li>
-      <li><Link to="about" smooth={true} duration={1000} offset={-80}>About</Link></li>
-        <li><Link to="gallery" smooth={true} duration={1000} offset={-80}>Gallery</Link></li>
-        <li><Link to="services" smooth={true} duration={1000} offset={-80}>Services</Link></li>
-        <li><Link to="contact" smooth={true} duration={1000} offset={-80}>Contact</Link></li>
+      <li><Link to="hero" smooth={true} duration={1000} offset={-80}>Home </Link></li>
+      <li><Link to="about" smooth={true} duration={1000} offset={-80}>Über uns </Link></li>
+        <li><Link to="gallery" smooth={true} duration={1000} offset={-80}>Galerie </Link></li>
+        <li><Link to="services" smooth={true} duration={1000} offset={-80}>Leistungen </Link></li>
+        <li><Link to="contact" smooth={true} duration={1000} offset={-80}>Kontakt</Link></li>
       </ul>
       <button className="menu-icon" onClick={toggleMenu}>
   {isMobile ? '✖' : '☰'}
