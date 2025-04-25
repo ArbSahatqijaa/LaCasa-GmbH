@@ -148,14 +148,18 @@
 
   .services-photos {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
+  
 
   .before-after-slide {
     display: flex;
     flex-direction: column;
     align-items: center;
+ 
   }
-
+  
   .before-after-slide img {
     width: 90%;
     max-width: 300px;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Services.css';
 
 const beforeAfterImages = [
@@ -18,6 +18,7 @@ const beforeAfterImages = [
 
 const Services = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [modalImage, setModalImage] = useState(null);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % beforeAfterImages.length);
@@ -27,6 +28,10 @@ const Services = () => {
     setCurrentSlide((prev) => (prev - 1 + beforeAfterImages.length) % beforeAfterImages.length);
   };
 
+  useEffect(() => {
+    document.body.style.overflow = modalImage ? 'hidden' : 'auto';
+  }, [modalImage]);
+
   return (
     <div id="services" className="services-container" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
       <h2>UNSERE LEISTUNGEN</h2>
@@ -34,10 +39,7 @@ const Services = () => {
         <div className="services-text">
           <h1>Qualität trifft auf Handwerk <br /> Alles aus einer Hand.</h1>
           <p>
-          Lacasa GmbH bietet Ihnen ein umfassendes Leistungsspektrum rund um Bau, Renovierung und Innenausbau alles aus einer Hand. Wir sind spezialisiert auf die Verlegung hochwertiger Bodenbeläge wie Laminat, Parkett, Vinyl und Teppich sowie auf professionelle Fliesenarbeiten in Bad, Küche und Außenbereichen. Auch die fachgerechte Sanierung und Reparatur bestehender Böden gehört zu unserem Alltag.
-
-Darüber hinaus gestalten wir Ihre Räume durch modernen Trockenbau und kreative Deckendesigns inklusive Beleuchtungskonzepten ganz nach Ihren Wünschen. Unsere Maler- und Spachtelarbeiten sorgen für ein frisches, stilvolles Raumgefühl.
-
+            Lacasa GmbH bietet Ihnen ein umfassendes Leistungsspektrum rund um Bau, Renovierung und Innenausbau alles aus einer Hand...
           </p>
           <div className="services-icons">
             <div className="icon-item">
@@ -59,11 +61,21 @@ Darüber hinaus gestalten wir Ihre Räume durch modernen Trockenbau und kreative
           <div className="before-after-slider">
             <div className="before-after">
               <div className="before">
-                <img src={beforeAfterImages[currentSlide].before} alt="Before" />
+                <img
+                  src={beforeAfterImages[currentSlide].before}
+                  alt="Before"
+                  onClick={() => setModalImage(beforeAfterImages[currentSlide].before)}
+                  style={{ cursor: 'pointer' }}
+                />
                 <p>BEFORE</p>
               </div>
               <div className="after">
-                <img src={beforeAfterImages[currentSlide].after} alt="After" />
+                <img
+                  src={beforeAfterImages[currentSlide].after}
+                  alt="After"
+                  onClick={() => setModalImage(beforeAfterImages[currentSlide].after)}
+                  style={{ cursor: 'pointer' }}
+                />
                 <p>AFTER</p>
               </div>
             </div>
@@ -74,6 +86,35 @@ Darüber hinaus gestalten wir Ihre Räume durch modernen Trockenbau und kreative
           </div>
         </div>
       </div>
+
+      {/* Modal for image preview */}
+      {modalImage && (
+        <div
+          className="modal-overlay"
+          onClick={() => setModalImage(null)}
+          style={{
+            position: 'fixed',
+            top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.85)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            cursor: 'zoom-out'
+          }}
+        >
+          <img
+            src={modalImage}
+            alt="Enlarged view"
+            style={{
+              maxHeight: '90%',
+              maxWidth: '90%',
+              borderRadius: '10px',
+              boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)'
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };
