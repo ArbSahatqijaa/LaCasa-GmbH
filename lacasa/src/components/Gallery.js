@@ -5,7 +5,7 @@ import GalleryModal from './GalleryModal';
 const galleries = [
   {
     id: 1,
-    title: 'Bathroom',
+    title: 'Badezimmer',
     images: [
       './assets/gallery/Banjo.jpg',
       '/assets/gallery/Banjo2.jpg',
@@ -14,7 +14,7 @@ const galleries = [
   },
   {
     id: 2,
-    title: 'Tarasa',
+    title: 'Terrasse',
     images: [
       '/assets/gallery/Tarasa.jpg',
       '/assets/gallery/Tarasa2.jpg',
@@ -24,7 +24,7 @@ const galleries = [
   },
   {
     id: 3,
-    title: 'Llaminati',
+    title: 'Laminieren',
     images: [
       '/assets/gallery/Llaminati.jpg',
       '/assets/gallery/Llaminati2.jpg',
@@ -34,7 +34,7 @@ const galleries = [
   },
   {
     id: 4,
-    title: 'Banjo',
+    title: 'Badezimmer',
     images: [
       '/assets/gallery/WC.jpg',
       '/assets/gallery/WC2.jpg',
@@ -45,7 +45,7 @@ const galleries = [
   },
   {
     id: 5,
-    title: 'Tavani',
+    title: 'Decke',
     images: [
       '/assets/gallery/Tavani.jpg',
       '/assets/gallery/Tavani2.jpg',
@@ -54,7 +54,7 @@ const galleries = [
   },
   {
     id: 6,
-    title: 'Parketi',
+    title: 'Laminieren',
     images: [
       '/assets/gallery/Parketi.jpg',
       '/assets/gallery/Parketi2.jpg',
@@ -109,7 +109,7 @@ const Gallery = () => {
       </div>
 
       <div className="gallery-footer">
-        <span>Page {currentPage} ({startIndex + 1}–{startIndex + currentItems.length} of {galleries.length})</span>
+        <span>Seite {currentPage} ({startIndex + 1}–{startIndex + currentItems.length} von {galleries.length})</span>
         <div className="pagination">
           {[...Array(totalPages)].map((_, i) => (
             <button

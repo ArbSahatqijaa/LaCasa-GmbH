@@ -81,10 +81,10 @@ const GalleryModal = ({ gallery, onClose }) => {
 
         <div className="modal-footer">
           <p className="modal-description">
-            {gallery.title} - Image {currentImage + 1} of {images.length}
+            {gallery.title} - Bild {currentImage + 1} von {images.length}
           </p>
           <p className="modal-zoom-info">
-            Click the image to {zoom ? 'zoom out' : 'zoom in'}
+          Klicken Sie auf das Bild {zoom ? 'Herauszoomen' : 'Vergrößern'}
           </p>
         </div>
       </div>

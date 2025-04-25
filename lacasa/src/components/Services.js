@@ -67,7 +67,7 @@ const Services = () => {
                   onClick={() => setModalImage(beforeAfterImages[currentSlide].before)}
                   style={{ cursor: 'pointer' }}
                 />
-                <p>BEFORE</p>
+                <p>VOR</p>
               </div>
               <div className="after">
                 <img
@@ -76,7 +76,7 @@ const Services = () => {
                   onClick={() => setModalImage(beforeAfterImages[currentSlide].after)}
                   style={{ cursor: 'pointer' }}
                 />
-                <p>AFTER</p>
+                <p>NACH</p>
               </div>
             </div>
             <div className="slider-controls">
