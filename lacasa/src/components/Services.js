@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Services.css';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const beforeAfterImages = [
   {
@@ -33,65 +34,102 @@ const Services = () => {
   }, [modalImage]);
 
   return (
-    <div id="services" className="services-container" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
-      <h2>UNSERE LEISTUNGEN</h2>
+    <div
+      id="services"
+      className="services-container"
+      style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}
+    >
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        UNSERE LEISTUNGEN
+      </motion.h2>
+
       <div className="services-main">
-        <div className="services-text">
+        <motion.div
+          className="services-text"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+        >
           <h1>Qualität trifft auf Handwerk <br /> Alles aus einer Hand.</h1>
           <p>
             Lacasa GmbH bietet Ihnen ein umfassendes Leistungsspektrum rund um Bau, Renovierung und Innenausbau alles aus einer Hand...
           </p>
           <div className="services-icons">
-            <div className="icon-item">
-              <img src="/assets/gallery/ceramic.png" alt="Ceramic" className="icon-image" />
-              <p>CERAMIC</p>
-            </div>
-            <div className="icon-item">
-              <img src="/assets/gallery/floor2.png" alt="Wood" className="icon-image" />
-              <p>WOOD</p>
-            </div>
-            <div className="icon-item">
-              <img src="/assets/gallery/floor.png" alt="Flooring" className="icon-image" />
-              <p>FLOORING</p>
-            </div>
+            {[
+              { src: '/assets/gallery/ceramic.png', label: 'CERAMIC' },
+              { src: '/assets/gallery/floor2.png', label: 'WOOD' },
+              { src: '/assets/gallery/floor.png', label: 'FLOORING' },
+            ].map((icon, index) => (
+              <motion.div
+                className="icon-item"
+                key={index}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
+                <img src={icon.src} alt={icon.label} className="icon-image" />
+                <p>{icon.label}</p>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="services-photos">
+        <motion.div
+          className="services-photos"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+        >
           <div className="before-after-slider">
-            <div className="before-after">
-              <div className="before">
-                <img
-                  src={beforeAfterImages[currentSlide].before}
-                  alt="Before"
-                  onClick={() => setModalImage(beforeAfterImages[currentSlide].before)}
-                  style={{ cursor: 'pointer' }}
-                />
-                <p>VOR</p>
-              </div>
-              <div className="after">
-                <img
-                  src={beforeAfterImages[currentSlide].after}
-                  alt="After"
-                  onClick={() => setModalImage(beforeAfterImages[currentSlide].after)}
-                  style={{ cursor: 'pointer' }}
-                />
-                <p>NACH</p>
-              </div>
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                className="before-after"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="before">
+                  <img
+                    src={beforeAfterImages[currentSlide].before}
+                    alt="Before"
+                    onClick={() => setModalImage(beforeAfterImages[currentSlide].before)}
+                    style={{ cursor: 'pointer' }}
+                  />
+                  <p>VOR</p>
+                </div>
+                <div className="after">
+                  <img
+                    src={beforeAfterImages[currentSlide].after}
+                    alt="After"
+                    onClick={() => setModalImage(beforeAfterImages[currentSlide].after)}
+                    style={{ cursor: 'pointer' }}
+                  />
+                  <p>NACH</p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
             <div className="slider-controls">
               <button onClick={prevSlide} className="slider-arrow">&#8592;</button>
               <button onClick={nextSlide} className="slider-arrow">&#8594;</button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Modal for image preview */}
       {modalImage && (
-        <div
+        <motion.div
           className="modal-overlay"
           onClick={() => setModalImage(null)}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
           style={{
             position: 'fixed',
             top: 0, left: 0, right: 0, bottom: 0,
@@ -103,9 +141,13 @@ const Services = () => {
             cursor: 'zoom-out'
           }}
         >
-          <img
+          <motion.img
             src={modalImage}
             alt="Enlarged view"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.8 }}
+            transition={{ duration: 0.3 }}
             style={{
               maxHeight: '90%',
               maxWidth: '90%',
@@ -113,7 +155,7 @@ const Services = () => {
               boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)'
             }}
           />
-        </div>
+        </motion.div>
       )}
     </div>
   );

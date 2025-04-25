@@ -34,9 +34,9 @@ const Contact = () => {
       <div className="contact-content" >
         {/* Left Section: Text */}
         <div className="contact-text">
-          <h1>CONTACT US</h1>
+          <h1>Kontaktieren Sie uns</h1>
           <p>
-            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+           Für weitere Informationen kontaktieren Sie uns bitte oder besuchen Sie uns vor Ort.
           </p>
           {/* Location and Phone Section */}
           <div className="contact-info">
@@ -73,7 +73,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder="E-Mail"
               value={formData.email}
               onChange={handleChange}
               required
@@ -81,19 +81,19 @@ const Contact = () => {
             <input
               type="tel"
               name="phone"
-              placeholder="Phone"
+              placeholder="Telefon"
               value={formData.phone}
               onChange={handleChange}
               required
             />
             <textarea
               name="message"
-              placeholder="Message"
+              placeholder="Nachricht"
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit">SEND</button>
+            <button type="submit">SCHICKEN</button>
           </form>
         </div>
       </div>

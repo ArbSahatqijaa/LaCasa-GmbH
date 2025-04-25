@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Gallery.css';
 import GalleryModal from './GalleryModal';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const galleries = [
   {
@@ -10,7 +11,7 @@ const galleries = [
       './assets/gallery/Banjo.jpg',
       '/assets/gallery/Banjo2.jpg',
       '/assets/gallery/Banjo3.jpg',
-    ]
+    ],
   },
   {
     id: 2,
@@ -19,8 +20,7 @@ const galleries = [
       '/assets/gallery/Tarasa.jpg',
       '/assets/gallery/Tarasa2.jpg',
       '/assets/gallery/Tarasa3.jpg',
-
-    ]
+    ],
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const galleries = [
       '/assets/gallery/Llaminati2.jpg',
       '/assets/gallery/Llaminati3.jpg',
       '/assets/gallery/Llaminati4.jpg',
-    ]
+    ],
   },
   {
     id: 4,
@@ -40,8 +40,7 @@ const galleries = [
       '/assets/gallery/WC2.jpg',
       '/assets/gallery/WC3.jpg',
       '/assets/gallery/WC4.jpg',
-
-    ]
+    ],
   },
   {
     id: 5,
@@ -50,7 +49,7 @@ const galleries = [
       '/assets/gallery/Tavani.jpg',
       '/assets/gallery/Tavani2.jpg',
       '/assets/gallery/Tavani3.jpg',
-    ]
+    ],
   },
   {
     id: 6,
@@ -58,7 +57,7 @@ const galleries = [
     images: [
       '/assets/gallery/Parketi.jpg',
       '/assets/gallery/Parketi2.jpg',
-    ]
+    ],
   },
   {
     id: 7,
@@ -68,7 +67,7 @@ const galleries = [
       '/assets/gallery/mainImage.jpg',
       '/assets/gallery/mainImage.jpg',
       '/assets/gallery/mainImage.jpg',
-    ]
+    ],
   },
 ];
 
@@ -91,25 +90,46 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="gallery-section" style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}>
-      <h2>UNSERE PROJEKTE</h2>
+    <section
+      id="gallery"
+      className="gallery-section"
+      style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}
+    >
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        UNSERE PROJEKTE
+      </motion.h2>
+
       <div className="gallery-grid">
-        {currentItems.map((gallery) => (
-          <div
-            key={gallery.id}
-            className="gallery-item"
-            onClick={() => openModal(gallery)}
-          >
-            <div className="gallery-image-wrapper">
-              <img src={gallery.images[0]} alt={gallery.title} />
-            </div>
-            <p>{gallery.title}</p>
-          </div>
-        ))}
+        <AnimatePresence mode="wait">
+          {currentItems.map((gallery) => (
+            <motion.div
+              key={gallery.id}
+              className="gallery-item"
+              onClick={() => openModal(gallery)}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              layout
+            >
+              <div className="gallery-image-wrapper">
+                <img src={gallery.images[0]} alt={gallery.title} />
+              </div>
+              <p>{gallery.title}</p>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
 
       <div className="gallery-footer">
-        <span>Seite {currentPage} ({startIndex + 1}–{startIndex + currentItems.length} von {galleries.length})</span>
+        <span>
+          Seite {currentPage} ({startIndex + 1}–{startIndex + currentItems.length} von{' '}
+          {galleries.length})
+        </span>
         <div className="pagination">
           {[...Array(totalPages)].map((_, i) => (
             <button
@@ -123,9 +143,7 @@ const Gallery = () => {
         </div>
       </div>
 
-      {selectedGallery && (
-        <GalleryModal gallery={selectedGallery} onClose={closeModal} />
-      )}
+      {selectedGallery && <GalleryModal gallery={selectedGallery} onClose={closeModal} />}
     </section>
   );
 };

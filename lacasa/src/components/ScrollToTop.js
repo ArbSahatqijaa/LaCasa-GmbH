@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion'; // Added this import
 import './ScrollToTop.css';
 
 const ScrollToTop = () => {
@@ -13,7 +14,10 @@ const ScrollToTop = () => {
   };
 
   const scrollToTop = () => {
-    scroll.scrollToTop({ duration: 700, smooth: true });
+    scroll.scrollToTop({
+      duration: 3500, // Increased duration for slower scroll
+      smooth: 'easeInOutQuint', // Smoother easing function
+    });
   };
 
   useEffect(() => {
@@ -22,14 +26,23 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <button
+    <motion.button
       className={`scroll-to-top ${visible ? 'show' : ''}`}
-      onClick={scrollToTop}>  
-      
-    <FontAwesomeIcon icon={faChevronUp} />
-
-      
-    </button>
+      onClick={scrollToTop}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ 
+        opacity: visible ? 1 : 0,
+        y: visible ? 0 : 20
+      }}
+      transition={{ 
+        duration: 0.3,
+        ease: "easeInOut"
+      }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >  
+      <FontAwesomeIcon icon={faChevronUp} />
+    </motion.button>
   );
 };
 
