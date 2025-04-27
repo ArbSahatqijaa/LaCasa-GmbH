@@ -56,13 +56,15 @@ const Services = () => {
         >
           <h1>Qualität trifft auf Handwerk <br /> Alles aus einer Hand.</h1>
           <p>
-            Lacasa GmbH bietet Ihnen ein umfassendes Leistungsspektrum rund um Bau, Renovierung und Innenausbau alles aus einer Hand...
-          </p>
+          Lacasa GmbH bietet Ihnen ein umfassendes Leistungsspektrum rund um Bau, Renovierung und Innenausbau alles aus einer Hand...<br/>
+          Unser erfahrenes Team begleitet Sie von der ersten Idee bis zur finalen Umsetzung – zuverlässig, termingerecht und mit höchstem Qualitätsanspruch.<br/>
+          Ob hochwertige Bodenbeläge, professionelle Fliesenverlegung, moderner Trockenbau oder kreative Deckengestaltungen – wir bieten maßgeschneiderte Lösungen für Privatkunden und Gewerbe.<br/>
+          Vertrauen Sie auf Lacasa GmbH – Ihr Partner für Sanierung, Modernisierung und Neubau, der Ihre Wohnträume Wirklichkeit werden lässt.          </p>
           <div className="services-icons">
             {[
-              { src: '/assets/gallery/ceramic.png', label: 'CERAMIC' },
-              { src: '/assets/gallery/floor2.png', label: 'WOOD' },
-              { src: '/assets/gallery/floor.png', label: 'FLOORING' },
+              { src: '/assets/gallery/ceramic.png', label: 'KERAMIK' },
+              { src: '/assets/gallery/floor2.png', label: 'HOLZ' },
+              { src: '/assets/gallery/floor.png', label: 'BODENBELAG' },
             ].map((icon, index) => (
               <motion.div
                 className="icon-item"

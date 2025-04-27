@@ -104,7 +104,7 @@ const Gallery = () => {
       </motion.h2>
 
       <div className="gallery-grid">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {currentItems.map((gallery) => (
             <motion.div
               key={gallery.id}
