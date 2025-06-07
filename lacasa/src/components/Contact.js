@@ -9,6 +9,10 @@ const Contact = () => {
     message: ''
   });
 
+  const address = "Bergstraße 8, 78247 Hilzingen";
+
+  const encodeAddress = (address) => encodeURIComponent(address);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -29,33 +33,35 @@ const Contact = () => {
   };
 
   return (
-    
-    <div id="contact"className="contact-container" style={{ backgroundImage: `url("/assets/gallery/Contact.jpg")` }}>
-      <div className="contact-content" >
+    <div
+      id="contact"
+      className="contact-container"
+      style={{ backgroundImage: `url("/assets/gallery/contact.jpg")` }}
+    >
+      <div className="contact-content">
         {/* Left Section: Text */}
         <div className="contact-text">
           <h1>Kontaktieren Sie uns</h1>
           <p>
-           Für weitere Informationen kontaktieren Sie uns bitte oder besuchen Sie uns vor Ort.
+            Für weitere Informationen kontaktieren Sie uns bitte oder besuchen Sie uns vor Ort.
           </p>
           {/* Location and Phone Section */}
           <div className="contact-info">
-          <div className="info-item">
+            <div className="info-item">
               <span className="icon">📍</span>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=123+Main+Street,+City,+Country"
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeAddress(address)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="location-link"
               >
-                123 Main Street, City, Country
+                {address}
               </a>
             </div>
             <div className="info-item">
-            <span className="icon">📞</span>
-            <a href="tel:+123456789" className="phone-link">+123 456 789</a>
+              <span className="icon">📞</span>
+              <a href="tel:+123456789" className="phone-link">015731369958</a>
             </div>
-
           </div>
         </div>
 

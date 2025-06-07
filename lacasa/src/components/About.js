@@ -8,14 +8,11 @@ const About = () => {
     <section
       id="about"
       className="about-section"
-      style={{ backgroundImage: `url("/assets/gallery/background.svg")` }}
+      style={{ backgroundImage: `url("/assets/gallery/Background.svg")` }}
     >
       <motion.div
          className="about-left"
-         initial={{ opacity: 0, x: 50 }}
          whileInView={{ opacity: 1, x: 0 }}
-         transition={{ duration: 0.8, delay: 0.3 }}
-         viewport={{ once: true, margin: "0px 0px -100px 0px" }}
       >
         <h2><span>Wir sind die </span> LA CASA GmbH</h2>
         <p>

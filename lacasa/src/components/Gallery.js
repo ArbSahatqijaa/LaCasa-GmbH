@@ -61,12 +61,36 @@ const galleries = [
   },
   {
     id: 7,
-    title: 'Staircase Modern',
+    title: 'Boden',
     images: [
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
-      '/assets/gallery/mainImage.jpg',
+      '/assets/gallery/Dysheme.jpg',
+      '/assets/gallery/Dysheme1.jpg',
+      '/assets/gallery/Dysheme2.jpg',
+    ],
+  },
+   {
+    id: 8,
+    title: 'Treppe',
+    images: [
+      '/assets/gallery/Shkalle.jpg',
+      '/assets/gallery/Shkalle2.jpg',
+      '/assets/gallery/Shkalle3.jpg',
+    ],
+  },
+  {
+    id: 9,
+    title: 'Badezimmer',
+    images: [
+      '/assets/gallery/Banjo5.jpg',
+      '/assets/gallery/Banjo4.jpg',
+    ],
+  },
+    {
+    id: 10,
+    title: 'Treppe',
+    images: [
+      '/assets/gallery/Shkalle4.jpg',
+      '/assets/gallery/Shkalle5.jpg',
     ],
   },
 ];
