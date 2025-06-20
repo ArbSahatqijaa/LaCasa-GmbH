@@ -59,11 +59,16 @@ const Contact = () => {
               </a>
             </div>
             <div className="info-item">
+              <span className="icon">✉️</span>
+              <a href="mailto:Info@lacasa-konstanz.de" className="phone-link">Info@lacasa-konstanz.de</a>
+            </div>
+            <div className="info-item">
               <span className="icon">📞</span>
               <a href="tel:+123456789" className="phone-link">015731369958</a>
             </div>
           </div>
         </div>
+
 
         {/* Right Section: Form */}
         <div className="contact-form">

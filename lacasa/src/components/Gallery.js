@@ -93,6 +93,16 @@ const galleries = [
       '/assets/gallery/Shkalle5.jpg',
     ],
   },
+   {
+    id: 11,
+    title: 'Badezimmer',
+    images: [
+      '/assets/gallery/VC.jpg',
+      '/assets/gallery/VC2.jpg',
+      '/assets/gallery/VC3.jpg',
+
+    ],
+  },
 ];
 
 const Gallery = () => {

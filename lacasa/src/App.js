@@ -29,7 +29,6 @@ function App() {
       <Slider />
       <Gallery />
       <Services />
-      <Testimonial/>
       <Contact />
 
 
