@@ -43,7 +43,7 @@ const GalleryModal = ({ gallery, onClose }) => {
         <div className="modal-main-image">
           <img
             src={images[currentImage]}
-            alt={`${gallery.title} - Image ${currentImage + 1}`}
+            alt={`${gallery.title} ${currentImage + 1}`}
             className={zoom ? 'zoom' : ''}
             onClick={toggleZoom}
           />
@@ -72,7 +72,7 @@ const GalleryModal = ({ gallery, onClose }) => {
             >
               <img
                 src={img}
-                alt={`${gallery.title} - Thumbnail ${idx + 1}`}
+                alt={`${gallery.title} ${idx + 1}`}
                 className="thumbnail"
               />
             </div>

@@ -3,7 +3,7 @@ import './Slider.css';
 
 const slides = [
   {
-    image: '/assets/gallery/Banjo.jpg',
+    image: '/assets/gallery/vcc.jpg',
     title: 'Badezimmer Renovierung',
     text: ' Wir verwandeln Ihr Badezimmer in eine echte Wohlfühloase. Mit hochwertigen Fliesen, durchdachter Raumaufteilung und moderner Ausstattung schaffen wir Räume, die nicht nur schön aussehen, sondern auch praktisch im Alltag sind.'
   },

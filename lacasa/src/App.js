@@ -10,7 +10,6 @@ import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import './styles/main.css';
 // import './components/fadein.css'; 
-import Testimonial from './components/Testimonial'; 
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);

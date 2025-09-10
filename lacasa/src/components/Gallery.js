@@ -24,12 +24,12 @@ const galleries = [
   },
   {
     id: 3,
-    title: 'Laminieren',
+    title: 'Hausrenovierung',
     images: [
-      '/assets/gallery/Llaminati.jpg',
-      '/assets/gallery/Llaminati2.jpg',
-      '/assets/gallery/Llaminati3.jpg',
-      '/assets/gallery/Llaminati4.jpg',
+      '/assets/gallery/Shpia.jpg',
+      '/assets/gallery/Shpia2.jpg',
+      '/assets/gallery/Shpia3.jpg',
+      '/assets/gallery/Shpia4.jpg',
     ],
   },
   {
@@ -100,6 +100,16 @@ const galleries = [
       '/assets/gallery/VC.jpg',
       '/assets/gallery/VC2.jpg',
       '/assets/gallery/VC3.jpg',
+
+    ],
+  },
+  {
+    id: 12,
+    title: 'Badezimmer',
+    images: [
+      '/assets/gallery/vcc.jpg',
+      '/assets/gallery/vcc2.jpg',
+      '/assets/gallery/vcc3.jpg',
 
     ],
   },

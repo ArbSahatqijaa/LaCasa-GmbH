@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section
       id="hero"
       className="hero-section"
-      style={{ backgroundImage: `url("/assets/gallery/Banner.jpg")` }}
+      style={{ backgroundImage: `url("/assets/gallery/Baner2025.jpg")` }}
     >
       <div className="hero-overlay">
         <motion.div
